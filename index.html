@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <meta name="description" content="Круизы в Антарктику">
+    <title>Круизы в Антарктику</title>
 
     <!-- styles -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -23,8 +23,34 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="page-header">
+        <div class="container">
+          <nav class="main-nav">
+            <a class="main-nav__logo" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="42" height="22">
+                <source media="(min-width: 1365px)" srcset="img/svg/logo-desktop.svg" width="70" height="38">
+                <img src="img/svg/logo-mobile.svg" width="38" height="20" alt="Логотип компании">
+              </picture>
+            </a>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Преимущества</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Направления</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Ближайшие круизы</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <h1 class="page-header__title">Круизы<br> в Антарктику</h1>
+          <p class="page-header__description">Волшебный мир<br> айсбергов и пингвинов</p>
+        </div>
       </header>
       <main>
         <section class="intro">
