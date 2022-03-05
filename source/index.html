@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <meta name="description" content="Круизы в Антарктику">
+    <title>Круизы в Антарктику</title>
 
     <!-- styles -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -26,11 +26,13 @@
       <header class="page-header">
         <div class="container">
           <nav class="main-nav">
-            <svg width="70" height="38" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.54211 18.0197L8.80358 7.26166L11.0637 8.42713L16.4415 0L19.7928 3.8551L21.0399 2.86887L25.872 8.78584L29.3013 4.84111L38.8875 18.0197L29.652 6.81358L28.249 11.5202L29.535 15.2407L21.2736 4.25849L21.1842 8.00563L25.872 18.0197L17.1038 2.51017L19.6369 10.8926L16.0909 2.73432L14.1424 8.15829L14.5319 4.61695L9.66076 17.3922L10.2452 12.0132L8.21887 9.86169L0.54211 18.0197Z" fill="#F9FBFD"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M41.6649 19.7024C28.5846 9.51096 8.22544 23.522 0 18.1188C9.04339 25.7756 30.1812 12.832 41.6649 19.7024Z" fill="#F9FBFD"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M42 20.5038C31.7374 14.1941 16.4741 22.9749 8.65134 20.9415C17.128 24.9111 32.9089 16.1156 42 20.5038Z" fill="#F9FBFD"/>
-            </svg>              
+            <a class="main-nav__logo" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="42" height="22">
+                <source media="(min-width: 1365px)" srcset="img/svg/logo-desktop.svg" width="70" height="38">
+                <img src="img/svg/logo-mobile.svg" width="38" height="20" alt="Логотип компании">
+              </picture>
+            </a>
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="#" class="main-nav__link">Преимущества</a>
@@ -46,6 +48,8 @@
               </li>
             </ul>
           </nav>
+          <h1 class="page-header__title">Круизы<br> в Антарктику</h1>
+          <p class="page-header__description">Волшебный мир<br> айсбергов и пингвинов</p>
         </div>
       </header>
       <main>
