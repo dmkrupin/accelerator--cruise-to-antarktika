@@ -1,0 +1,103 @@
+.intro {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-color: $color-default-white;
+
+    @include vp-1365 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include vp-767 {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}
+
+.intro__text {
+    min-height: 301px;
+    padding-top: 66px;
+
+    background-image: url("../img/content/intro-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 560px 301px;    
+
+    @include retina {
+        background-image: url("../img/content/intro-desktop@2x.jpg");
+    }
+
+    @include vp-1365 {
+        min-height: 264px;
+        padding-top: 0;
+
+        background-image: url("../img/content/intro-tablet.jpg");
+        background-size: 324px 264px;
+
+        @include retina {
+            background-image: url("../img/content/intro-tablet@2x.jpg");
+        }
+    }
+
+    @include vp-767 {
+        min-height: 510px;
+        padding-top: 0;
+
+        background-image: url("../img/content/intro-mobile.jpg");
+        background-size: 100%;
+        background-position: 50% 100%;
+
+        @include retina {
+            background-image: url("../img/content/intro-mobile@2x.jpg");
+        }
+    }
+
+
+}
+
+.intro__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    max-width: 512px;
+
+    font: 600 28px/150% $ff-montserrat;
+
+    br {
+        display: none;
+
+        @include vp-1365 {
+            display: block;
+        }
+    }
+
+    @include vp-1365 {
+        margin-bottom: 30px;
+        max-width: 324px;
+
+        font: 600 26px/140% $ff-montserrat;
+    }
+
+    @include vp-767 {
+        max-width: max-content;
+
+        font: 600 24px/140% $ff-montserrat;
+    }
+}
+
+.intro__description {
+    margin: 0;
+    padding: 0;
+    max-width: 512px;
+
+    font: 400 16px/150% $ff-montserrat;
+
+    @include vp-1365 {
+        max-width: 324px;
+        font: 400 16px/150% $ff-montserrat;
+    }
+
+    @include vp-767 {
+        max-width: max-content;
+    }
+}

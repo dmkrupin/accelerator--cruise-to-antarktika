@@ -55,16 +55,66 @@
       <main>
         <section class="intro">
           <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+            <div class="intro__text">
+              <h2 class="intro__title">Путешествие<br> на край Земли</h2>
+              <p class="intro__description">
+                Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики.
+                 Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
+                 несколько видов пингвинов, китов, морских котиков и многое другое.
+              </p>
+            </div>
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="page-footer">
+        <div class="container">
+          <nav class="main-nav">
+            <a class="main-nav__logo" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="42" height="22">
+                <source media="(min-width: 1365px)" srcset="img/svg/logo-desktop.svg" width="70" height="38">
+                <img src="img/svg/logo-mobile.svg" width="38" height="20" alt="Логотип компании">
+              </picture>
+            </a>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Преимущества</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Направления</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Ближайшие круизы</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="page-footer__socials socials">
+              <li class="socials__item">
+                <a class="socials__link socials__link--fb" href="#">
+                  <svg width="11" height="20" aria-label="Наш Фейсбук">
+                    <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--ig" href="#">
+                  <svg width="20" height="20" aria-label="Наш Инстаграм">
+                    <use xlink:href="img/sprite_auto.svg#icon-ig"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--tw" href="#">
+                  <svg width="20" height="16" aria-label="Наш Твиттер">
+                    <use xlink:href="img/sprite_auto.svg#icon-tw"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </footer>
     </div>
     <div class="modal modal--preload" data-modal="feedback">

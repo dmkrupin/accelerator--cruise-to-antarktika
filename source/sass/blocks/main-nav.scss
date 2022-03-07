@@ -9,16 +9,17 @@
 .main-nav__logo {
     width: 70px;
     height: 38px;
+    margin-right: 40px;
 
     @include vp-1365 {
-        width: 42px;
-        height: 22px;
+        width: 38px;
+        height: 20px;
     }
 
     @include vp-767 {
         align-self: flex-start;
-        width: 38px;
-        height: 20px;
+        width: 42px;
+        height: 22px;
     }
 
     img {
@@ -30,25 +31,25 @@
         height: 38px;
 
         @include vp-1365 {
-            width: 42px;
-            height: 22px;
-        }
-
-        @include vp-767 {
             width: 38px;
             height: 20px;
-        }
+            }
+
+        @include vp-767 {
+            width: 42px;
+            height: 22px;
+            }
     }
 }
 
 .main-nav__list {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 auto;
     padding: 0;
     list-style: none;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     @include vp-767 {
         flex-direction: column;
