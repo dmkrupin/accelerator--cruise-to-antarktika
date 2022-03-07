@@ -826,6 +826,7 @@ button,
 .main-nav__logo {
   width: 70px;
   height: 38px;
+  margin-right: 40px;
 }
 
 .main-nav__logo img {
@@ -839,7 +840,7 @@ button,
 }
 
 .main-nav__list {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 auto;
   padding: 0;
   list-style: none;
   display: -webkit-box;
@@ -847,9 +848,9 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .main-nav__item {
@@ -863,6 +864,96 @@ button,
 .main-nav__link {
   font: 500 16px/19.2px "Montserrat", "Arial", sans-serif;
   color: #F9FBFD;
+}
+
+.intro {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #ffffff;
+}
+
+.intro__text {
+  min-height: 301px;
+  padding-top: 66px;
+  background-image: url("../img/content/intro-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  background-size: 560px 301px;
+}
+
+.intro__title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  max-width: 512px;
+  font: 600 28px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.intro__title br {
+  display: none;
+}
+
+.intro__description {
+  margin: 0;
+  padding: 0;
+  max-width: 512px;
+  font: 400 16px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.page-footer {
+  background-color: #011C40;
+  min-height: 138px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.page-footer .main-nav {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+.page-footer .main-nav__list {
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  margin-left: 0;
+}
+
+.page-footer .page-footer__socials {
+  margin: 0 0 0 auto;
+}
+
+.socials {
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
+  gap: 33px;
+}
+
+.socials__link svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.socials__link--fb,
+.socials__link--fb svg {
+  width: 11px;
+  height: 20px;
+}
+
+.socials__link--ig,
+.socials__link--ig svg {
+  width: 20px;
+  height: 20px;
+}
+
+.socials__link--tw,
+.socials__link--tw svg {
+  width: 20px;
+  height: 16px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -901,13 +992,13 @@ button,
   }
 
   .main-nav__logo {
-    width: 42px;
-    height: 22px;
+    width: 38px;
+    height: 20px;
   }
 
   .main-nav__logo img {
-    width: 42px;
-    height: 22px;
+    width: 38px;
+    height: 20px;
   }
 
   .main-nav__item:not(:last-child) {
@@ -917,11 +1008,64 @@ button,
   .main-nav__link {
     font: 14px/16.8px "Montserrat", "Arial", sans-serif;
   }
+
+  .intro {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .intro__text {
+    min-height: 264px;
+    padding-top: 0;
+    background-image: url("../img/content/intro-tablet.jpg");
+    background-size: 324px 264px;
+  }
+
+  .intro__title br {
+    display: block;
+  }
+
+  .intro__title {
+    margin-bottom: 30px;
+    max-width: 324px;
+    font: 600 26px/140% "Montserrat", "Arial", sans-serif;
+  }
+
+  .intro__description {
+    max-width: 324px;
+    font: 400 16px/150% "Montserrat", "Arial", sans-serif;
+  }
+
+  .page-footer {
+    min-height: 120px;
+  }
+
+  .socials__link--fb,
+  .socials__link--fb svg {
+    width: 9px;
+    height: 16px;
+  }
+
+  .socials__link--ig,
+  .socials__link--ig svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .socials__link--tw,
+  .socials__link--tw svg {
+    width: 16px;
+    height: 13px;
+  }
 }
 
 @media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1365px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1365px) and (min-resolution: 2dppx) {
   .page-header {
     background-image: url("../img/content/header-bg-tablet@2x.jpg");
+  }
+
+  .intro__text {
+    background-image: url("../img/content/intro-tablet@2x.jpg");
   }
 }
 
@@ -971,13 +1115,13 @@ button,
   .main-nav__logo {
     -ms-flex-item-align: start;
     align-self: flex-start;
-    width: 38px;
-    height: 20px;
+    width: 42px;
+    height: 22px;
   }
 
   .main-nav__logo img {
-    width: 38px;
-    height: 20px;
+    width: 42px;
+    height: 22px;
   }
 
   .main-nav__list {
@@ -997,16 +1141,90 @@ button,
   .main-nav__link {
     font: 18px/21.6px "Montserrat", "Arial", sans-serif;
   }
+
+  .intro {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .intro__text {
+    min-height: 510px;
+    padding-top: 0;
+    background-image: url("../img/content/intro-mobile.jpg");
+    background-size: 100%;
+    background-position: 50% 100%;
+  }
+
+  .intro__title {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    font: 600 24px/140% "Montserrat", "Arial", sans-serif;
+  }
+
+  .intro__description {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+
+  .page-footer {
+    min-height: 283px;
+  }
+
+  .page-footer .main-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .page-footer .main-nav__logo {
+    margin-bottom: 30px;
+  }
+
+  .page-footer .main-nav__list {
+    margin-bottom: 30px;
+  }
+
+  .page-footer .main-nav__item {
+    text-align: left;
+  }
+
+  .page-footer .main-nav__link {
+    font: 12px/14.4px "Montserrat", "Arial", sans-serif;
+  }
+
+  .page-footer .page-footer__socials {
+    margin-left: 0;
+  }
+
+  .socials__link--fb,
+  .socials__link--fb svg {
+    width: 9px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .page-header {
     background-image: url("../img/content/header-bg-mobile@2x.jpg");
   }
+
+  .intro__text {
+    background-image: url("../img/content/intro-mobile@2x.jpg");
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .page-header {
     background-image: url("../img/content/header-bg-desktop@2x.jpg");
+  }
+
+  .intro__text {
+    background-image: url("../img/content/intro-desktop@2x.jpg");
   }
 }
