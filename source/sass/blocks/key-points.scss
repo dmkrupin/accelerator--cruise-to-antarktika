@@ -1,0 +1,183 @@
+.key-points {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-color: $color-solitude;
+    background-image: url("../img/content/key-points-bg-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include retina {
+        background-image: url("../img/content/key-points-bg-desktop@2x.jpg");
+    }
+
+    @include vp-1365 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    
+        background-image: url("../img/content/key-points-bg-tablet.jpg");
+
+        @include retina {
+            background-image: url("../img/content/key-points-bg-tablet@2x.jpg");
+        }
+    }
+
+    @include vp-767 {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    
+        background-image: url("../img/content/key-points-bg-mobile.jpg");
+
+        @include retina {
+            background-image: url("../img/content/key-points-bg-mobile@2x.jpg");
+        }
+    }
+}
+
+.key-points__title {
+    margin: 0 0 60px 0;
+    padding: 0;
+
+    text-align: center;
+    font: 600 28px/150% $ff-montserrat;
+
+    @include vp-1365 {
+        font: 600 26px/150% $ff-montserrat;
+    }
+
+    @include vp-767 {
+        margin: 0 0 40px 0;
+
+        font: 600 24px/150% $ff-montserrat;
+    }
+}
+
+.key-points__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @include vp-1365 {
+        gap: 30px;
+    }
+
+    @include vp-767 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.key-points__item {
+    padding: 87px 30px 30px;
+    position: relative;
+    background-color: $color-default-white;
+
+    @include vp-1365 {
+        padding: 76px 20px 25px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        background-repeat: no-repeat;
+
+        @include vp-1365 {
+            left: 20px;
+        }
+    }
+
+    &--liner::before {
+        $width-desktop: 27px;
+        $height-desktop: 32px;
+        $width-tablet: 21px;
+        $height-tablet: 26px;
+
+        width: $width-desktop;
+        height: $height-desktop;
+        background-image: url("../img/svg/key-points-ship.svg");
+        background-size: $width-desktop $height-desktop;
+
+        @include vp-1365 {
+            top: 25px;
+            left: 25px;
+            width: $width-tablet;
+            height: $height-tablet;    
+            background-size: $width-tablet $height-tablet;
+        }
+    }
+    &--all-inclusive::before {
+        top: 35px;
+
+        $width-desktop: 38px;
+        $height-desktop: 21px;
+        $width-tablet: 33px;
+        $height-tablet: 19px;
+
+        width: $width-desktop;
+        height: $height-desktop;
+
+        background-image: url("../img/svg/key-points-all-inclusive.svg");
+        background-size: $width-desktop $height-desktop;
+
+        @include vp-1365 {
+            top: 29px;
+
+            width: $width-tablet;
+            height: $height-tablet;    
+            background-size: $width-tablet $height-tablet;
+        }
+    }
+    &--boats::before {
+        top: 38px;
+
+        $width-desktop: 42px;
+        $height-desktop: 15px;
+        $width-tablet: 38px;
+        $height-tablet: 13px;
+
+        width: $width-desktop;
+        height: $height-desktop;
+
+        background-image: url("../img/svg/key-points-boat.svg");
+        background-size: $width-desktop $height-desktop;
+
+        @include vp-1365 {
+            top: 32px;
+
+            width: $width-tablet;
+            height: $height-tablet;    
+            background-size: $width-tablet $height-tablet;
+        }
+
+    }
+}
+
+.key-points__heading {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    font: 500 18px/150% $ff-montserrat;
+
+    @include vp-1365 {
+        font: 500 18px/140% $ff-montserrat;
+    }
+}
+
+.key-points__details {
+    margin: 0;
+    padding: 0;
+
+    font: 400 14px/140% $ff-montserrat;
+
+    @include vp-1365 {
+        font: 400 14px/140% $ff-montserrat;
+    }
+}
