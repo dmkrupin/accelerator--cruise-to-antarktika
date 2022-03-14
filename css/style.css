@@ -640,26 +640,25 @@ button,
   padding: 0 103px;
 }
 
-.btn {
+.button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #2c39f2;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px 46px;
+  background-color: #ffffff;
   border: none;
   cursor: pointer;
+  color: #011C40;
+  font: 600 14px/150% "Montserrat", "Arial", sans-serif;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
-.btn--red {
-  background-color: #ff1553;
-}
-
-.btn:disabled {
+.button:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -886,6 +885,7 @@ button,
   margin-bottom: 40px;
   max-width: 512px;
   font: 600 28px/150% "Montserrat", "Arial", sans-serif;
+  color: #011C40;
 }
 
 .intro__title br {
@@ -897,6 +897,433 @@ button,
   padding: 0;
   max-width: 512px;
   font: 400 16px/150% "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.key-points {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #E3ECF6;
+  background-image: url("../img/content/key-points-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.key-points__title {
+  margin: 0 0 60px 0;
+  padding: 0;
+  text-align: center;
+  color: #011C40;
+  font: 600 28px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.key-points__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.key-points__item {
+  padding: 87px 30px 30px;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.key-points__item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-repeat: no-repeat;
+}
+
+.key-points__item--liner::before {
+  width: 27px;
+  height: 32px;
+  background-image: url("../img/svg/key-points-ship.svg");
+  background-size: 27px 32px;
+}
+
+.key-points__item--all-inclusive::before {
+  top: 35px;
+  width: 38px;
+  height: 21px;
+  background-image: url("../img/svg/key-points-all-inclusive.svg");
+  background-size: 38px 21px;
+}
+
+.key-points__item--boats::before {
+  top: 38px;
+  width: 42px;
+  height: 15px;
+  background-image: url("../img/svg/key-points-boat.svg");
+  background-size: 42px 15px;
+}
+
+.key-points__heading {
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #011C40;
+  font: 500 18px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.key-points__details {
+  margin: 0;
+  padding: 0;
+  font: 400 14px/140% "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.cruises {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.cruises__title {
+  margin: 0 0 60px 0;
+  padding: 0;
+  text-align: center;
+  color: #011C40;
+  font: 600 28px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.cruises__item {
+  min-height: 386px;
+}
+
+.cruise-card {
+  position: relative;
+}
+
+.cruise-card--astoria .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-astoria-desktop.jpg");
+}
+
+.cruise-card--atlantis .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-atlantis-desktop.jpg");
+}
+
+.cruise-card--avrora .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-avrora-desktop.jpg");
+}
+
+.cruise-card--leonor .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-leonor-desktop.jpg");
+}
+
+.cruise-card--minion-1 .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-minion1-desktop.jpg");
+}
+
+.cruise-card--odyssey .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-odyssey-desktop.jpg");
+}
+
+.cruise-card--olympia .cruise-card__cover {
+  background-image: url("../img/content/cruise/cruise-olympia-desktop.jpg");
+}
+
+.cruise-card__cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #011C40;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+
+.cruise-card__heading {
+  margin: auto 30px 30px;
+  padding: 0;
+  color: #ffffff;
+  font: 500 18px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.cruise-card__info {
+  width: 100%;
+  height: 100%;
+  padding: 35px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #011C40;
+  color: #ffffff;
+}
+
+.cruise-card__cruise-name {
+  margin: 0 0 25px 0;
+  padding: 0;
+  font: 500 18px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.cruise-card__details {
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+.cruise-card__term {
+  margin-bottom: 10px;
+  font: 500 14px/140% "Montserrat", "Arial", sans-serif;
+}
+
+.cruise-card__description {
+  margin: 0;
+  font: 400 14px/140% "Montserrat", "Arial", sans-serif;
+}
+
+.cruise-card__description:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.cruise-card__button {
+  margin-top: auto;
+}
+
+.booking {
+  min-height: 555px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #E3ECF6;
+  background-image: url("../img/content/booking-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.booking .container {
+  position: relative;
+}
+
+.booking__title {
+  margin: 0 0 30px 60px;
+  padding: 0;
+  font: 700 40px/150% "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.booking__description {
+  margin: 0 0 0 60px;
+  padding: 0;
+  font: 400 18px/150% "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.booking__form {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #011C40;
+  color: #ffffff;
+}
+
+.form__heading {
+  margin: 0 0 35px;
+  padding: 0;
+  font: 500 18px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.form__input {
+  margin: 0 0 20px;
+  padding: 11px 16px;
+  height: 43px;
+  border: none;
+  font: 400 14px/150% "Montserrat", "Arial", sans-serif;
+  color: #011C40;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #011C40;
+  opacity: 0.7;
+}
+
+.form__input::-moz-placeholder {
+  color: #011C40;
+  opacity: 0.7;
+}
+
+.form__input:-ms-input-placeholder {
+  color: #011C40;
+  opacity: 0.7;
+}
+
+.form__input::-ms-input-placeholder {
+  color: #011C40;
+  opacity: 0.7;
+}
+
+.form__input::placeholder {
+  color: #011C40;
+  opacity: 0.7;
+}
+
+.form__checkbox-label {
+  margin-bottom: 30px;
+  min-height: 18px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form__checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form__checkbox-box {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: #ffffff;
+}
+
+.form__checkbox:checked + .form__checkbox-box::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 12px;
+  height: 8px;
+  background-image: url("../img/svg/checkbox-flag.svg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+
+.form__checkbox-label-text {
+  margin-left: 23px;
+  font: 400 10px/130% "Montserrat", "Arial", sans-serif;
+}
+
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  gap: 100px;
+}
+
+.contacts__map {
+  width: 560px;
+  height: 306px;
+  background-color: #E3ECF6;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 306px;
+}
+
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.contacts__heading {
+  margin: 0 0 45px;
+  padding: 0;
+  color: #011C40;
+  font: 500 18px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.contacts__address {
+  margin: 0 0 33px;
+  padding: 0;
+  color: #011C40;
+  font: 400 16px/150% "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+}
+
+.contacts__address svg {
+  margin-right: 10px;
+}
+
+.contacts__tel {
+  margin: 0;
+  padding: 0;
+  color: #011C40;
+  font: 400 16px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.contacts__tel svg {
+  margin-right: 10px;
 }
 
 .page-footer {
@@ -964,8 +1391,8 @@ button,
 } */
 
 @media (hover: hover), screen and (min-width: 0\0) {
-  .btn:hover,
-  .btn:focus {
+  .button:hover,
+  .button:focus {
     opacity: 0.8;
   }
 }
@@ -1036,6 +1463,145 @@ button,
     font: 400 16px/150% "Montserrat", "Arial", sans-serif;
   }
 
+  .key-points {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("../img/content/key-points-bg-tablet.jpg");
+  }
+
+  .key-points__title {
+    font: 600 26px/150% "Montserrat", "Arial", sans-serif;
+  }
+
+  .key-points__list {
+    gap: 30px;
+  }
+
+  .key-points__item {
+    padding: 76px 20px 25px;
+  }
+
+  .key-points__item::before {
+    left: 20px;
+  }
+
+  .key-points__item--liner::before {
+    top: 25px;
+    left: 25px;
+    width: 21px;
+    height: 26px;
+    background-size: 21px 26px;
+  }
+
+  .key-points__item--all-inclusive::before {
+    top: 29px;
+    width: 33px;
+    height: 19px;
+    background-size: 33px 19px;
+  }
+
+  .key-points__item--boats::before {
+    top: 32px;
+    width: 38px;
+    height: 13px;
+    background-size: 38px 13px;
+  }
+
+  .key-points__heading {
+    font: 500 18px/140% "Montserrat", "Arial", sans-serif;
+  }
+
+  .key-points__details {
+    font: 400 14px/140% "Montserrat", "Arial", sans-serif;
+  }
+
+  .cruises {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cruise-card--astoria .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-astoria-tablet.jpg");
+  }
+
+  .cruise-card--atlantis .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-atlantis-tablet.jpg");
+  }
+
+  .cruise-card--avrora .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-avrora-tablet.jpg");
+  }
+
+  .cruise-card--leonor .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-leonor-tablet.jpg");
+  }
+
+  .cruise-card--minion-1 .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-minion1-tablet.jpg");
+  }
+
+  .cruise-card--odyssey .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-odyssey-tablet.jpg");
+  }
+
+  .cruise-card--olympia .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-olympia-tablet.jpg");
+  }
+
+  .cruise-card__heading {
+    margin: auto 35px 35px;
+  }
+
+  .booking {
+    min-height: 805px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("../img/content/booking-tablet.jpg");
+  }
+
+  .booking__title {
+    margin: 0 auto 25px;
+    text-align: center;
+    font: 700 34px/150% "Montserrat", "Arial", sans-serif;
+  }
+
+  .booking__description {
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  .booking__form {
+    position: static;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contacts .container {
+    gap: 30px;
+  }
+
+  .contacts__map {
+    width: 65%;
+    height: 335px;
+  }
+
+  .contacts__map iframe {
+    height: 335px;
+  }
+
   .page-footer {
     min-height: 120px;
   }
@@ -1064,8 +1630,40 @@ button,
     background-image: url("../img/content/header-bg-tablet@2x.jpg");
   }
 
-  .intro__text {
-    background-image: url("../img/content/intro-tablet@2x.jpg");
+  .key-points {
+    background-image: url("../img/content/key-points-bg-tablet@2x.jpg");
+  }
+
+  .cruise-card--astoria .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-astoria-tablet@2x.jpg");
+  }
+
+  .cruise-card--atlantis .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-atlantis-tablet@2x.jpg");
+  }
+
+  .cruise-card--avrora .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-avrora-tablet@2x.jpg");
+  }
+
+  .cruise-card--leonor .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-leonor-tablet@2x.jpg");
+  }
+
+  .cruise-card--minion-1 .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-minion1-tablet@2x.jpg");
+  }
+
+  .cruise-card--odyssey .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-odyssey-tablet@2x.jpg");
+  }
+
+  .cruise-card--olympia .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-olympia-tablet@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/content/booking-tablet@2x.jpg");
   }
 }
 
@@ -1151,7 +1749,7 @@ button,
     min-height: 510px;
     padding-top: 0;
     background-image: url("../img/content/intro-mobile.jpg");
-    background-size: 100%;
+    background-size: 290px 186px;
     background-position: 50% 100%;
   }
 
@@ -1166,6 +1764,159 @@ button,
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
+  }
+
+  .key-points {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background-image: url("../img/content/key-points-bg-mobile.jpg");
+  }
+
+  .key-points__title {
+    margin: 0 0 40px 0;
+    font: 600 24px/150% "Montserrat", "Arial", sans-serif;
+  }
+
+  .key-points__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .cruises {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .cruises__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .cruise-card--astoria .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-astoria-mobile.jpg");
+  }
+
+  .cruise-card--atlantis .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-atlantis-mobile.jpg");
+  }
+
+  .cruise-card--avrora .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-avrora-mobile.jpg");
+  }
+
+  .cruise-card--leonor .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-leonor-mobile.jpg");
+  }
+
+  .cruise-card--minion-1 .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-minion1-mobile.jpg");
+  }
+
+  .cruise-card--odyssey .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-odyssey-mobile.jpg");
+  }
+
+  .cruise-card--olympia .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-olympia-mobile.jpg");
+  }
+
+  .cruise-card__heading {
+    margin: auto 25px 25px;
+  }
+
+  .booking {
+    min-height: 760px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background-image: url("../img/content/booking-mobile.jpg");
+  }
+
+  .booking__title {
+    font: 700 24px/130% "Montserrat", "Arial", sans-serif;
+  }
+
+  .booking__title br {
+    display: none;
+  }
+
+  .booking__description {
+    margin: 0 auto 40px;
+    font: 400 16px/140% "Montserrat", "Arial", sans-serif;
+  }
+
+  .booking__description br {
+    display: none;
+  }
+
+  .booking__form {
+    width: 100%;
+  }
+
+  .form {
+    padding: 40px 30px;
+  }
+
+  .form__heading {
+    text-align: center;
+    font: 500 18px/140% "Montserrat", "Arial", sans-serif;
+  }
+
+  .form__heading br {
+    display: none;
+  }
+
+  .form__checkbox-label {
+    min-height: 20px;
+  }
+
+  .form__checkbox-box {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__checkbox:checked + .form__checkbox-box::before {
+    top: 6px;
+    left: 4px;
+  }
+
+  .form__checkbox-label-text {
+    margin-left: 28px;
+    font: 400 10px/120% "Montserrat", "Arial", sans-serif;
+  }
+
+  .contacts {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .contacts .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 43px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 316px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .contacts__map iframe {
+    height: 316px;
   }
 
   .page-footer {
@@ -1214,8 +1965,40 @@ button,
     background-image: url("../img/content/header-bg-mobile@2x.jpg");
   }
 
-  .intro__text {
-    background-image: url("../img/content/intro-mobile@2x.jpg");
+  .key-points {
+    background-image: url("../img/content/key-points-bg-mobile@2x.jpg");
+  }
+
+  .cruise-card--astoria .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-astoria-mobile@2x.jpg");
+  }
+
+  .cruise-card--atlantis .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-atlantis-mobile@2x.jpg");
+  }
+
+  .cruise-card--avrora .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-avrora-mobile@2x.jpg");
+  }
+
+  .cruise-card--leonor .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-leonor-mobile@2x.jpg");
+  }
+
+  .cruise-card--minion-1 .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-minion1-mobile@2x.jpg");
+  }
+
+  .cruise-card--odyssey .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-odyssey-mobile@2x.jpg");
+  }
+
+  .cruise-card--olympia .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-olympia-mobile@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/content/booking-mobile.jpg");
   }
 }
 
@@ -1224,7 +2007,39 @@ button,
     background-image: url("../img/content/header-bg-desktop@2x.jpg");
   }
 
-  .intro__text {
-    background-image: url("../img/content/intro-desktop@2x.jpg");
+  .key-points {
+    background-image: url("../img/content/key-points-bg-desktop@2x.jpg");
+  }
+
+  .cruise-card--astoria .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-astoria-desktop@2x.jpg");
+  }
+
+  .cruise-card--atlantis .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-atlantis-desktop@2x.jpg");
+  }
+
+  .cruise-card--avrora .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-avrora-desktop@2x.jpg");
+  }
+
+  .cruise-card--leonor .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-leonor-desktop@2x.jpg");
+  }
+
+  .cruise-card--minion-1 .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-minion1-desktop@2x.jpg");
+  }
+
+  .cruise-card--odyssey .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-odyssey-desktop@2x.jpg");
+  }
+
+  .cruise-card--olympia .cruise-card__cover {
+    background-image: url("../img/content/cruise/cruise-olympia-desktop@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/content/booking-desktop@2x.jpg");
   }
 }
