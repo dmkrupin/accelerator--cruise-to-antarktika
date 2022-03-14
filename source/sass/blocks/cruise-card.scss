@@ -1,0 +1,249 @@
+.cruise-card {
+    position: relative;
+
+    &--astoria .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-astoria-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-astoria-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-astoria-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-astoria-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-astoria-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-astoria-mobile@2x.jpg");
+            }
+        }
+    }
+
+    &--atlantis .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-atlantis-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-atlantis-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-atlantis-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-atlantis-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-atlantis-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-atlantis-mobile@2x.jpg");
+            }
+        }
+    }
+
+    &--avrora .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-avrora-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-avrora-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-avrora-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-avrora-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-avrora-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-avrora-mobile@2x.jpg");
+            }
+        }
+    }
+
+    &--leonor .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-leonor-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-leonor-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-leonor-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-leonor-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-leonor-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-leonor-mobile@2x.jpg");
+            }
+        }
+    }
+
+    &--minion-1 .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-minion1-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-minion1-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-minion1-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-minion1-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-minion1-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-minion1-mobile@2x.jpg");
+            }
+        }
+    }
+
+    &--odyssey .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-odyssey-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-odyssey-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-odyssey-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-odyssey-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-odyssey-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-odyssey-mobile@2x.jpg");
+            }
+        }
+    }
+
+    &--olympia .cruise-card__cover {
+        background-image: url("../img/content/cruise/cruise-olympia-desktop.jpg");
+
+        @include retina {
+            background-image: url("../img/content/cruise/cruise-olympia-desktop@2x.jpg");
+        }
+
+        @include vp-1365 {
+            background-image: url("../img/content/cruise/cruise-olympia-tablet.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-olympia-tablet@2x.jpg");
+            }
+        }
+
+        @include vp-767 {
+            background-image: url("../img/content/cruise/cruise-olympia-mobile.jpg");
+
+            @include retina {
+                background-image: url("../img/content/cruise/cruise-olympia-mobile@2x.jpg");
+            }
+        }
+    }
+}
+
+.cruise-card__cover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+
+    // display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-tangaroa;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    transition: height $trans-default;
+}
+
+.cruise-card__heading {
+    margin: auto 30px 30px;
+    padding: 0;
+
+    color: $color-default-white;
+    font: 500 18px/150% $ff-montserrat;
+
+    @include vp-1365 {
+        margin: auto 35px 35px;
+    }
+
+    @include vp-767 {
+        margin: auto 25px 25px;
+    }
+}
+
+.cruise-card__info {
+    width: 100%;
+    height: 100%;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $color-tangaroa;
+    color: $color-default-white;
+}
+
+.cruise-card__cruise-name {
+    margin: 0 0 25px 0;
+    padding: 0;
+
+    font: 500 18px/150% $ff-montserrat;
+}
+
+.cruise-card__details {
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+.cruise-card__term {
+    margin-bottom: 10px;
+
+    font: 500 14px/140% $ff-montserrat;
+}
+.cruise-card__description {
+    margin: 0;
+
+    font: 400 14px/140% $ff-montserrat;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.cruise-card__button {
+    margin-top: auto;
+}
