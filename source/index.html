@@ -25,26 +25,27 @@
     <div class="wrapper">
       <header class="page-header">
         <div class="container">
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--closed main-nav--nojs">
             <a class="main-nav__logo" href="#">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="42" height="22">
-                <source media="(min-width: 1365px)" srcset="img/svg/logo-desktop.svg" width="70" height="38">
-                <img src="img/svg/logo-mobile.svg" width="38" height="20" alt="Логотип компании">
-              </picture>
+              <svg width="70" height="38" alt="Логотип компании">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>  
             </a>
-            <ul class="main-nav__list">
+            <button class="main-nav__toggle main-nav__toggle--nojs">
+              <span class="visually-hidden">Меню</span>
+            </button>
+            <ul class="main-nav__list main-nav__list--nojs">
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Преимущества</a>
+                <a href="#key-points" class="main-nav__link">Преимущества</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Направления</a>
+                <a href="#catalog" class="main-nav__link">Направления</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Ближайшие круизы</a>
+                <a href="#booking" class="main-nav__link">Ближайшие круизы</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Контакты</a>
+                <a href="#contacts" class="main-nav__link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -65,7 +66,7 @@
             </div>
           </div>
         </section>
-        <section class="key-points">
+        <section class="key-points" id="key-points">
           <div class="container">
             <h2 class="key-points__title">Преимущества</h2>
             <ul class="key-points__list">
@@ -93,7 +94,7 @@
             </ul>
           </div>
         </section>
-        <section class="cruises">
+        <section class="cruises" id="catalog">
           <div class="container">
             <h2 class="cruises__title">Ближайшие круизы</h2>
             <ul class="cruises__list">
@@ -252,7 +253,7 @@
             </ul>
           </div>
         </section>
-        <section class="booking">
+        <section class="booking" id="booking">
           <div class="container">
             <h2 class="booking__title">Раннее бронирование</h2>
             <p class="booking__description">Забронируйте тур за 3-6 месяцев <br> до даты выезда и сэкономьте до 50%</p>
@@ -270,7 +271,7 @@
             </form>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container">
             <div class="contacts__map">
               <div style="position:relative;overflow:hidden;">
@@ -313,16 +314,16 @@
             </a>
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Преимущества</a>
+                <a href="#key-points" class="main-nav__link">Преимущества</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Направления</a>
+                <a href="#catalog" class="main-nav__link">Направления</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Ближайшие круизы</a>
+                <a href="#booking" class="main-nav__link">Ближайшие круизы</a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Контакты</a>
+                <a href="#contacts" class="main-nav__link">Контакты</a>
               </li>
             </ul>
             <ul class="page-footer__socials socials">
