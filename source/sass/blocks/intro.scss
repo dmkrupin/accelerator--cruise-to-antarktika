@@ -24,9 +24,9 @@
     background-position: 100% 0%;
     background-size: 560px 301px;    
 
-    // @include retina {
-    //     background-image: url("../img/content/intro-desktop@2x.jpg");
-    // }
+    @include retina {
+        background-image: url("../img/content/intro-desktop@2x.jpg");
+    }
 
     @include vp-1365 {
         min-height: 264px;
@@ -35,9 +35,9 @@
         background-image: url("../img/content/intro-tablet.jpg");
         background-size: 324px 264px;
 
-        // @include retina {
-        //     background-image: url("../img/content/intro-tablet@2x.jpg");
-        // }
+        @include retina {
+            background-image: url("../img/content/intro-tablet@2x.jpg");
+        }
     }
 
     @include vp-767 {
@@ -48,9 +48,9 @@
         background-size: 290px 186px;
         background-position: 50% 100%;
 
-        // @include retina {
-        //     background-image: url("../img/content/intro-mobile@2x.jpg");
-        // }
+        @include retina {
+            background-image: url("../img/content/intro-mobile@2x.jpg");
+        }
     }
 
 
