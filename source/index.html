@@ -259,9 +259,9 @@
             <p class="booking__description">Забронируйте тур за 3-6 месяцев <br> до даты выезда и сэкономьте до 50%</p>
             <form class="booking__form form">
               <p class="form__heading">Оставьте заявку и мы свяжемся<br> с вами в ближайшее время</p>
-              <input class="form__input" type="text" name="name" placeholder="Имя">
-              <input class="form__input" type="tel" name="tel" placeholder="Телефон">
-              <input class="form__input" type="email" name="email" placeholder="Email">
+              <input class="form__input" type="text" name="name" placeholder="Имя" required>
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
+              <input class="form__input" type="email" name="email" placeholder="Email" required>
               <label class="form__checkbox-label" for="form-personal-data">
                 <input class="form__checkbox" type="checkbox" name="personal-data" id="form-personal-data" checked>
                 <span class="form__checkbox-box"></span>
@@ -306,11 +306,9 @@
         <div class="container">
           <nav class="main-nav">
             <a class="main-nav__logo" href="#">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg" width="42" height="22">
-                <source media="(min-width: 1365px)" srcset="img/svg/logo-desktop.svg" width="70" height="38">
-                <img src="img/svg/logo-mobile.svg" width="38" height="20" alt="Логотип компании">
-              </picture>
+              <svg width="70" height="38" alt="Логотип компании">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>  
             </a>
             <ul class="main-nav__list">
               <li class="main-nav__item">
