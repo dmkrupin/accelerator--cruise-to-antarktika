@@ -5,7 +5,7 @@
 
     background-color: $color-default-white;
     border: none;
-    cursor: pointer;  
+    cursor: pointer;
 
     color: $color-tangaroa;
     font: 600 14px/150% $ff-montserrat;
@@ -16,11 +16,11 @@
         opacity: 0.5;
         pointer-events: none;
     }
-    
+
     @media (hover: hover), screen and (min-width: 0\0) {
         &:hover,
         &:focus {
             opacity: 0.8;
         }
-    }    
+    }
 }

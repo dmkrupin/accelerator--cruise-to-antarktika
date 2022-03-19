@@ -10,14 +10,14 @@
     @include retina {
         background-image: url('../img/content/header-bg-desktop@2x.jpg');
     }
-    
+
     @include vp-1365 {
         min-height: 638px;
         background-image: url('../img/content/header-bg-tablet.jpg');
 
         @include retina {
             background-image: url('../img/content/header-bg-tablet@2x.jpg');
-        }    
+        }
     }
 
     @include vp-767 {
@@ -26,7 +26,7 @@
 
         @include retina {
             background-image: url('../img/content/header-bg-mobile@2x.jpg');
-        }    
+        }
     }
 }
 

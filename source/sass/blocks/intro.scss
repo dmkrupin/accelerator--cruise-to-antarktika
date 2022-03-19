@@ -22,7 +22,7 @@
     background-image: url("../img/content/intro-desktop.jpg");
     background-repeat: no-repeat;
     background-position: 100% 0%;
-    background-size: 560px 301px;    
+    background-size: 560px 301px;
 
     @include retina {
         background-image: url("../img/content/intro-desktop@2x.jpg");

@@ -15,7 +15,7 @@
     @include vp-1365 {
         padding-top: 100px;
         padding-bottom: 100px;
-    
+
         background-image: url("../img/content/key-points-bg-tablet.jpg");
 
         @include retina {
@@ -26,7 +26,7 @@
     @include vp-767 {
         padding-top: 65px;
         padding-bottom: 65px;
-    
+
         background-image: url("../img/content/key-points-bg-mobile.jpg");
 
         @include retina {
@@ -110,7 +110,7 @@
             top: 25px;
             left: 25px;
             width: $width-tablet;
-            height: $height-tablet;    
+            height: $height-tablet;
             background-size: $width-tablet $height-tablet;
         }
     }
@@ -132,7 +132,7 @@
             top: 29px;
 
             width: $width-tablet;
-            height: $height-tablet;    
+            height: $height-tablet;
             background-size: $width-tablet $height-tablet;
         }
     }
@@ -154,7 +154,7 @@
             top: 32px;
 
             width: $width-tablet;
-            height: $height-tablet;    
+            height: $height-tablet;
             background-size: $width-tablet $height-tablet;
         }
 

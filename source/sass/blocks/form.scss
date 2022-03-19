@@ -56,7 +56,7 @@
 .form__checkbox {
     position: absolute;
     appearance: none;
-  
+
     &-box {
         position: absolute;
         width: 18px;
@@ -69,7 +69,7 @@
             height: 20px;
         }
     }
-  
+
     &:checked + &-box::before {
         content: "";
         position: absolute;

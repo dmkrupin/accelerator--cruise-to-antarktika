@@ -1,5 +1,5 @@
 @mixin retina {
-  @media 
+  @media
   (min-resolution: $retina-dpi),
   (-webkit-min-device-pixel-ratio: $retina-pixel-ratio),
   (min-resolution: $retina-dppx) {
