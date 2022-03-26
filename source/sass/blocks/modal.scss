@@ -117,3 +117,31 @@
     pointer-events: auto;
   }
 }
+
+[data-modal="mobile-menu"] {
+
+  .modal__wrapper {
+    padding: 0 0 0 35px;
+  }
+
+  .modal__content {
+    width: 100%;
+    max-width: $vp-768 - 1 - 35px;
+    min-height: 100%;
+    padding: 20px 15px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .modal__close-btn {
+    top: 24px;
+    right: 16px;
+
+    width: 13px;
+    height: 13px;
+  }
+}
+

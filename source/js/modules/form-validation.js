@@ -15,8 +15,10 @@ const onTelInputInput = () => {
 };
 
 const initFormValidation = () => {
+  if (telInputElement) {
     //Валидируем поле ввода телефона
     telInputElement.addEventListener('input', onTelInputInput);
+  }
 };
 
 export { initFormValidation };

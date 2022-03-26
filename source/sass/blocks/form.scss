@@ -2,17 +2,21 @@
     display: flex;
     flex-direction: column;
 
-    padding: 50px;
+    padding: 47px 50px;
     background-color: $color-tangaroa;
     color: $color-default-white;
 
+    @include vp-1023 {
+        padding: 46px 52px;
+    }
+
     @include vp-767 {
-        padding: 40px 30px;
+        padding: 36px 30px;
     }
 }
 
 .form__heading {
-    margin: 0 0 35px;
+    margin: 0 0 25px;
     padding: 0;
 
     font: 500 18px/150% $ff-montserrat;
@@ -22,6 +26,7 @@
             display: none;
         }
 
+        margin-bottom: 27px;
         text-align: center;
         font: 500 18px/140% $ff-montserrat;
     }
@@ -36,6 +41,10 @@
     font: 400 14px/150% $ff-montserrat;
     color: $color-tangaroa;
 
+    &:focus {
+      outline: 2px solid $color-solitude;
+    }
+
     &::placeholder {
         color: $color-tangaroa;
         opacity: 0.7;
@@ -49,7 +58,10 @@
     display: flex;
     align-items: center;
 
+    cursor: pointer;
+
     @include vp-767 {
+      margin-bottom: 25px;
         min-height: 20px;
     }
 }
@@ -85,6 +97,10 @@
             top: 6px;
             left: 4px;
         }
+    }
+
+    &:focus + &-box {
+      outline: 2px solid $color-solitude;
     }
 }
 

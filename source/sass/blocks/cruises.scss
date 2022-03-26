@@ -1,41 +1,51 @@
 .cruises {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 111px;
+    padding-bottom: 121px;
 
-    @include vp-1365 {
-        padding-top: 100px;
+    @include vp-1023 {
+        padding-top: 90px;
         padding-bottom: 100px;
     }
 
     @include vp-767 {
-        padding-top: 65px;
+        padding-top: 56px;
         padding-bottom: 65px;
     }
 }
 
 .cruises__title {
-    margin: 0 0 60px 0;
+    margin: 0 0 48px 0;
     padding: 0;
 
     text-align: center;
     color: $color-tangaroa;
     font: 600 28px/150% $ff-montserrat;
+
+    @include vp-1023 {
+      font: 600 26px/150% $ff-montserrat;
+    }
+
+    @include vp-767 {
+      margin-bottom: 30px;
+      font: 600 24px/150% $ff-montserrat;
+    }
 }
 
 .cruises__list {
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     list-style: none;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 
-    @include vp-1365 {
+    @include vp-1023 {
         grid-template-columns: repeat(2, 1fr);
     }
 
     @include vp-767 {
+        padding: 0 10px;
         display: flex;
         flex-direction: column;
     }

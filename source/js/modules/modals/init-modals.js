@@ -20,7 +20,7 @@ const settings = {
     lockFocus: true,
     startFocus: true,
     focusBack: true,
-    eventTimeout: 400,
+    eventTimeout: 300,
     openCallback: false,
     closeCallback: false,
   },

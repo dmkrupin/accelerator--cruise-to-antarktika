@@ -5,80 +5,28 @@
     justify-content: space-between;
     align-items: center;
 
-    @include vp-1365 {
-        margin-top: 30px;
+    @include vp-1023 {
+        margin-top: 27px;
     }
 
     @include vp-767 {
+      margin-top: 20px;
 
-        &--closed {
-            margin-top: 20px;
+      .main-nav__list {
+        display: none;
+    }
 
-            .main-nav__list {
-                display: none;
-            }
-        }
-
-        &--opened {
-            margin-top: 0;
-            padding: 20px 15px;
-            height: 100vh;
-            width: 285px;
-
-            position: absolute;
-            z-index: 800;
-            top: 0;
-            right: 0;
-
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-
-            background-color: $color-default-white;
-            box-shadow: 0 0 20px 15px rgba(0, 43, 102, 0.5);
+        &--modal {
+          flex-direction: column;
+          margin-top: -2px;
 
             .main-nav__logo {
-                margin-bottom: 33px;
+                margin-bottom: 35px;
+                margin-right: 0;
 
                 svg {
                     fill: $color-tangaroa;
                 }
-            }
-
-            .main-nav__toggle {
-                position: absolute;
-                top: 25px;
-                right: 15px;
-
-                width: 13px;
-                height: 13px;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 1px;
-                    width: 17px;
-                    height: 2px;
-                    transform: rotate(45deg);
-                    transform-origin: top left;
-                    background-color: $color-tangaroa;
-                    box-shadow: none;
-                }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 1px;
-                    width: 17px;
-                    height: 2px;
-                    transform: rotate(-45deg);
-                    transform-origin: top right;
-                    background-color: $color-tangaroa;
-                    box-shadow: none;
-                }
-
             }
 
             .main-nav__list {
@@ -89,19 +37,17 @@
             }
 
             .main-nav__item {
+              padding: 10px;
                 text-align: left;
 
                 &:not(:last-child) {
-                    margin-bottom: 28px;
+                    margin-bottom: 6px;
                 }
             }
 
             .main-nav__link {
                 color: $color-tangaroa;
-            }
-
-            & ~ .page-header__title {
-                margin-top: 185px;
+                letter-spacing: 0.2px;
             }
         }
     }
@@ -134,7 +80,7 @@
         fill: $color-alice-blue;
     }
 
-    @include vp-1365 {
+    @include vp-1023 {
         width: 38px;
         height: 20px;
     }
@@ -153,7 +99,7 @@
         width: 70px;
         height: 38px;
 
-        @include vp-1365 {
+        @include vp-1023 {
             width: 38px;
             height: 20px;
         }
@@ -173,7 +119,7 @@
         position: relative;
 
         width: 24px;
-        height: 12px;
+        height: 16px;
         border: 0;
         background-color: $color-transparent;
 
@@ -214,8 +160,8 @@
     &:not(:last-child) {
         margin-right: 33px;
 
-        @include vp-1365 {
-            margin-right: 23px;
+        @include vp-1023 {
+            margin-right: 26px;
         }
 
         @include vp-767 {
@@ -229,7 +175,7 @@
     font: 500 16px/19.2px $ff-montserrat;
     color: $color-alice-blue;
 
-    @include vp-1365 {
+    @include vp-1023 {
         font: 14px/16.8px $ff-montserrat;
     }
 

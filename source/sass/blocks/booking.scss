@@ -1,9 +1,5 @@
 .booking {
     min-height: 555px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     background-color: $color-solitude;
 
@@ -14,16 +10,21 @@
 
     & .container {
         position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     @include retina {
         background-image: url("../img/content/booking-desktop@2x.jpg");
     }
 
-    @include vp-1365 {
+    @include vp-1023 {
         min-height: 805px;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 70px;
+        padding-bottom: 71px;
 
         background-image: url("../img/content/booking-tablet.jpg");
 
@@ -33,7 +34,7 @@
     }
     @include vp-767 {
         min-height: 760px;
-        padding-top: 65px;
+        padding-top: 40px;
         padding-bottom: 65px;
 
         background-image: url("../img/content/booking-mobile.jpg");
@@ -45,14 +46,14 @@
 }
 
 .booking__title {
-    margin: 0 0 30px 60px;
+    margin: -8px 0 7px 60px;
     padding: 0;
 
     font: 700 40px/150% $ff-montserrat;
     color: $color-tangaroa;
 
-    @include vp-1365 {
-        margin: 0 auto 25px;
+    @include vp-1023 {
+        margin: 19px auto 5px;
 
         text-align: center;
         font: 700 34px/150% $ff-montserrat;
@@ -62,7 +63,7 @@
         br  {
             display: none;
         }
-
+        margin-bottom: 15px;
         font: 700 24px/130% $ff-montserrat;
     }
 }
@@ -74,8 +75,8 @@
     font: 400 18px/150% $ff-montserrat;
     color: $color-tangaroa;
 
-    @include vp-1365 {
-        margin: 0 auto 60px;
+    @include vp-1023 {
+        margin: 0 auto 52px;
 
         text-align: center;
     }
@@ -85,7 +86,7 @@
             display: none;
         }
 
-        margin: 0 auto 40px;
+        margin: 0 auto 33px;
 
         font: 400 16px/140% $ff-montserrat;
     }
@@ -94,10 +95,10 @@
 .booking__form {
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 12%;
     transform: translateY(-50%);
 
-    @include vp-1365 {
+    @include vp-1023 {
         position: static;
         transform: translateY(0);
 

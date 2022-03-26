@@ -1,7 +1,7 @@
 .button {
     display: inline-flex;
     justify-content: center;
-    padding: 15px 46px;
+    padding: 12px 46px;
 
     background-color: $color-default-white;
     border: none;
@@ -21,6 +21,7 @@
         &:hover,
         &:focus {
             opacity: 0.8;
+            outline: 2px solid $color-solitude;
         }
     }
 }
