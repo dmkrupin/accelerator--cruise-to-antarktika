@@ -639,7 +639,7 @@ html {
 .container {
   width: 100%;
   min-width: 320px;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
   padding: 0 103px;
 }
@@ -651,7 +651,7 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 15px 46px;
+  padding: 12px 5px;
   background-color: #ffffff;
   border: none;
   cursor: pointer;
@@ -683,7 +683,7 @@ html {
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 43, 102, 0.5);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -779,10 +779,40 @@ html {
   pointer-events: auto;
 }
 
+[data-modal="mobile-menu"] .modal__wrapper {
+  padding: 0 0 0 35px;
+}
+
+[data-modal="mobile-menu"] .modal__content {
+  width: 100%;
+  max-width: 732px;
+  min-height: 100%;
+  padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+[data-modal="mobile-menu"] .modal__close-btn {
+  top: 24px;
+  right: 16px;
+  width: 13px;
+  height: 13px;
+}
+
 .page-header {
   min-height: 650px;
   position: relative;
-  background-color: #E3ECF6;
+  background-color: #011C40;
   background-image: url("../img/content/header-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -790,8 +820,8 @@ html {
 }
 
 .page-header__title {
-  margin-top: 210px;
-  margin-bottom: 30px;
+  margin-top: 198px;
+  margin-bottom: 14px;
   margin-left: 95px;
   font: 700 54px/64.8px "Montserrat", "Arial", sans-serif;
   color: #F9FBFD;
@@ -885,17 +915,17 @@ html {
 }
 
 .intro__text {
-  min-height: 301px;
-  padding-top: 66px;
+  padding-top: 57px;
   background-image: url("../img/content/intro-desktop.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0%;
-  background-size: 560px 301px;
+  background-size: 50%;
 }
 
 .intro__title {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 23px;
+  width: 40%;
   max-width: 512px;
   font: 600 28px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
@@ -908,14 +938,15 @@ html {
 .intro__description {
   margin: 0;
   padding: 0;
+  width: 40%;
   max-width: 512px;
   font: 400 16px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
 }
 
 .key-points {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 112px;
+  padding-bottom: 117px;
   background-color: #E3ECF6;
   background-image: url("../img/content/key-points-bg-desktop.jpg");
   background-repeat: no-repeat;
@@ -924,7 +955,7 @@ html {
 }
 
 .key-points__title {
-  margin: 0 0 60px 0;
+  margin: 0 0 47px 0;
   padding: 0;
   text-align: center;
   color: #011C40;
@@ -943,7 +974,7 @@ html {
 }
 
 .key-points__item {
-  padding: 87px 30px 30px;
+  padding: 81px 30px 30px;
   position: relative;
   background-color: #ffffff;
 }
@@ -954,6 +985,14 @@ html {
   top: 30px;
   left: 30px;
   background-repeat: no-repeat;
+}
+
+.key-points__item--all-inclusive .key-points__heading br {
+  display: none;
+}
+
+.key-points__item--boats .key-points__heading br {
+  display: none;
 }
 
 .key-points__item--liner::before {
@@ -980,7 +1019,7 @@ html {
 }
 
 .key-points__heading {
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   padding: 0;
   color: #011C40;
   font: 500 18px/150% "Montserrat", "Arial", sans-serif;
@@ -994,12 +1033,12 @@ html {
 }
 
 .cruises {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 111px;
+  padding-bottom: 121px;
 }
 
 .cruises__title {
-  margin: 0 0 60px 0;
+  margin: 0 0 48px 0;
   padding: 0;
   text-align: center;
   color: #011C40;
@@ -1008,13 +1047,13 @@ html {
 
 .cruises__list {
   margin: 0;
-  padding: 0;
+  padding: 0 15px;
   list-style: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-gap: 30px;
 }
 
 .cruises__item {
@@ -1023,6 +1062,11 @@ html {
 
 .cruise-card {
   position: relative;
+}
+
+.cruise-card:focus .cruise-card__cover {
+  outline: 2px solid #011C40;
+  outline-offset: -2px;
 }
 
 .cruise-card--astoria .cruise-card__cover {
@@ -1075,7 +1119,18 @@ html {
 }
 
 .cruise-card__heading {
-  margin: auto 30px 30px;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+  margin: auto 30px 22px;
   padding: 0;
   color: #ffffff;
   font: 500 18px/150% "Montserrat", "Arial", sans-serif;
@@ -1084,7 +1139,7 @@ html {
 .cruise-card__info {
   width: 100%;
   height: 100%;
-  padding: 35px 25px;
+  padding: 30px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1097,28 +1152,61 @@ html {
 }
 
 .cruise-card__cruise-name {
-  margin: 0 0 25px 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+  margin: 0 0 13px 0;
   padding: 0;
   font: 500 18px/150% "Montserrat", "Arial", sans-serif;
 }
 
 .cruise-card__details {
-  margin: 0 0 30px 0;
+  margin: 0;
   padding: 0;
 }
 
 .cruise-card__term {
-  margin-bottom: 10px;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+  margin-bottom: 4px;
   font: 500 14px/140% "Montserrat", "Arial", sans-serif;
 }
 
 .cruise-card__description {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
   margin: 0;
   font: 400 14px/140% "Montserrat", "Arial", sans-serif;
 }
 
 .cruise-card__description:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .cruise-card__button {
@@ -1126,6 +1214,16 @@ html {
 }
 
 .booking {
+  min-height: 555px;
+  background-color: #E3ECF6;
+  background-image: url("../img/content/booking-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.booking .container {
+  position: relative;
   min-height: 555px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1137,23 +1235,15 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #E3ECF6;
-  background-image: url("../img/content/booking-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.booking .container {
-  position: relative;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .booking__title {
-  margin: 0 0 30px 60px;
+  margin: -8px 0 7px 60px;
   padding: 0;
+  max-width: 43%;
   font: 700 40px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
 }
@@ -1161,6 +1251,7 @@ html {
 .booking__description {
   margin: 0 0 0 60px;
   padding: 0;
+  max-width: 40%;
   font: 400 18px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
 }
@@ -1168,7 +1259,7 @@ html {
 .booking__form {
   position: absolute;
   top: 50%;
-  right: 10%;
+  right: 12%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1182,13 +1273,13 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 50px;
+  padding: 47px 50px;
   background-color: #011C40;
   color: #ffffff;
 }
 
 .form__heading {
-  margin: 0 0 35px;
+  margin: 0 0 25px;
   padding: 0;
   font: 500 18px/150% "Montserrat", "Arial", sans-serif;
 }
@@ -1200,6 +1291,10 @@ html {
   border: none;
   font: 400 14px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
+}
+
+.form__input:focus {
+  outline: 2px solid #E3ECF6;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -1237,6 +1332,7 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .form__checkbox {
@@ -1264,6 +1360,10 @@ html {
   background-image: url("../img/svg/checkbox-flag.svg");
   background-repeat: no-repeat;
   background-color: #ffffff;
+}
+
+.form__checkbox:focus + .form__checkbox-box {
+  outline: 2px solid #E3ECF6;
 }
 
 .form__checkbox-label-text {
@@ -1311,14 +1411,20 @@ html {
 }
 
 .contacts__heading {
-  margin: 0 0 45px;
+  margin: 0 0 32px;
   padding: 0;
   color: #011C40;
   font: 500 18px/150% "Montserrat", "Arial", sans-serif;
 }
 
 .contacts__address {
-  margin: 0 0 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 0 0 22px;
   padding: 0;
   color: #011C40;
   font: 400 16px/150% "Montserrat", "Arial", sans-serif;
@@ -1327,9 +1433,17 @@ html {
 
 .contacts__address svg {
   margin-right: 10px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .contacts__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   color: #011C40;
@@ -1408,10 +1522,11 @@ html {
   .button:hover,
   .button:focus {
     opacity: 0.8;
+    outline: 2px solid #E3ECF6;
   }
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1023px) {
   .container {
     padding: 0 45px;
   }
@@ -1423,7 +1538,7 @@ html {
 
   .page-header__title {
     margin-left: 0;
-    margin-top: 230px;
+    margin-top: 218px;
     font: 700 50px/60px "Montserrat", "Arial", sans-serif;
   }
 
@@ -1433,7 +1548,7 @@ html {
   }
 
   .main-nav {
-    margin-top: 30px;
+    margin-top: 27px;
   }
 
   .main-nav__logo {
@@ -1447,7 +1562,7 @@ html {
   }
 
   .main-nav__item:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 26px;
   }
 
   .main-nav__link {
@@ -1455,8 +1570,8 @@ html {
   }
 
   .intro {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 92px;
   }
 
   .intro__text {
@@ -1464,6 +1579,7 @@ html {
     padding-top: 0;
     background-image: url("../img/content/intro-tablet.jpg");
     background-size: 324px 264px;
+    background-position: 100% 50%;
   }
 
   .intro__title br {
@@ -1471,41 +1587,50 @@ html {
   }
 
   .intro__title {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
+    width: auto;
     max-width: 324px;
     font: 600 26px/140% "Montserrat", "Arial", sans-serif;
   }
 
   .intro__description {
+    width: auto;
     max-width: 324px;
     font: 400 16px/150% "Montserrat", "Arial", sans-serif;
   }
 
   .key-points {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
     background-image: url("../img/content/key-points-bg-tablet.jpg");
   }
 
   .key-points__title {
+    margin: 0 0 49px 0;
     font: 600 26px/150% "Montserrat", "Arial", sans-serif;
   }
 
   .key-points__list {
     gap: 30px;
+    margin: 0;
+    max-width: none;
   }
 
   .key-points__item {
-    padding: 76px 20px 25px;
+    padding: 71px 16px 19px 20px;
   }
 
   .key-points__item::before {
     left: 20px;
   }
 
+  .key-points__item--all-inclusive .key-points__heading br {
+    display: block;
+  }
+
   .key-points__item--liner::before {
     top: 25px;
-    left: 25px;
+    left: 20px;
     width: 21px;
     height: 26px;
     background-size: 21px 26px;
@@ -1530,17 +1655,23 @@ html {
   }
 
   .key-points__details {
-    font: 400 14px/140% "Montserrat", "Arial", sans-serif;
+    font: 400 14px/143% "Montserrat", "Arial", sans-serif;
   }
 
   .cruises {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
+  }
+
+  .cruises__title {
+    font: 600 26px/150% "Montserrat", "Arial", sans-serif;
   }
 
   .cruises__list {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    max-width: none;
   }
 
   .cruise-card--astoria .cruise-card__cover {
@@ -1572,24 +1703,34 @@ html {
   }
 
   .cruise-card__heading {
-    margin: auto 35px 35px;
+    margin: auto 35px 26px;
+  }
+
+  .cruise-card__info {
+    padding: 30px 35px;
+  }
+
+  .booking .container {
+    min-height: auto;
   }
 
   .booking {
     min-height: 805px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 71px;
     background-image: url("../img/content/booking-tablet.jpg");
   }
 
   .booking__title {
-    margin: 0 auto 25px;
+    margin: 19px auto 5px;
+    max-width: none;
     text-align: center;
     font: 700 34px/150% "Montserrat", "Arial", sans-serif;
   }
 
   .booking__description {
-    margin: 0 auto 60px;
+    margin: 0 auto 52px;
+    max-width: none;
     text-align: center;
   }
 
@@ -1600,6 +1741,11 @@ html {
     transform: translateY(0);
     margin: 0 auto;
     width: 60%;
+    max-width: none;
+  }
+
+  .form {
+    padding: 46px 52px;
   }
 
   .contacts {
@@ -1612,7 +1758,9 @@ html {
   }
 
   .contacts__map {
-    width: 65%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 48%;
     height: 335px;
   }
 
@@ -1620,8 +1768,37 @@ html {
     height: 335px;
   }
 
+  .contacts__heading {
+    margin: 0 0 26px;
+  }
+
+  .contacts__heading br {
+    display: none;
+  }
+
+  .contacts__address svg {
+    width: 18px;
+    height: 22px;
+  }
+
   .page-footer {
     min-height: 120px;
+  }
+
+  .page-footer .main-nav__logo {
+    margin-right: 25px;
+  }
+
+  .page-footer .main-nav__item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  .page-footer .main-nav__link {
+    font: 12px/120% "Montserrat", "Arial", sans-serif;
+  }
+
+  .socials {
+    gap: 23px;
   }
 
   .socials__link--fb,
@@ -1643,7 +1820,7 @@ html {
   }
 }
 
-@media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-resolution: 144dpi), (max-width: 1365px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .page-header {
     background-image: url("../img/content/header-bg-tablet@2x.jpg");
   }
@@ -1714,8 +1891,8 @@ html {
 
   .page-header__title {
     margin-left: 0;
-    margin-top: 143px;
-    margin-bottom: 25px;
+    margin-top: 134px;
+    margin-bottom: 12px;
     font: 700 36px/45px "Montserrat", "Arial", sans-serif;
   }
 
@@ -1732,93 +1909,32 @@ html {
     display: block;
   }
 
-  .main-nav--closed {
+  .main-nav {
     margin-top: 20px;
   }
 
-  .main-nav--closed .main-nav__list {
+  .main-nav .main-nav__list {
     display: none;
   }
 
-  .main-nav--opened {
-    margin-top: 0;
-    padding: 20px 15px;
-    height: 100vh;
-    width: 285px;
-    position: absolute;
-    z-index: 800;
-    top: 0;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .main-nav--modal {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0 0 20px 15px rgba(0, 43, 102, 0.5);
-    box-shadow: 0 0 20px 15px rgba(0, 43, 102, 0.5);
+    margin-top: -2px;
   }
 
-  .main-nav--opened .main-nav__logo {
-    margin-bottom: 33px;
+  .main-nav--modal .main-nav__logo {
+    margin-bottom: 35px;
+    margin-right: 0;
   }
 
-  .main-nav--opened .main-nav__logo svg {
+  .main-nav--modal .main-nav__logo svg {
     fill: #011C40;
   }
 
-  .main-nav--opened .main-nav__toggle {
-    position: absolute;
-    top: 25px;
-    right: 15px;
-    width: 13px;
-    height: 13px;
-  }
-
-  .main-nav--opened .main-nav__toggle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 1px;
-    width: 17px;
-    height: 2px;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transform-origin: top left;
-    -ms-transform-origin: top left;
-    transform-origin: top left;
-    background-color: #011C40;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .main-nav--opened .main-nav__toggle::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 1px;
-    width: 17px;
-    height: 2px;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transform-origin: top right;
-    -ms-transform-origin: top right;
-    transform-origin: top right;
-    background-color: #011C40;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .main-nav--opened .main-nav__list {
+  .main-nav--modal .main-nav__list {
     margin: 0 auto 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1831,20 +1947,18 @@ html {
     flex-wrap: nowrap;
   }
 
-  .main-nav--opened .main-nav__item {
+  .main-nav--modal .main-nav__item {
+    padding: 10px;
     text-align: left;
   }
 
-  .main-nav--opened .main-nav__item:not(:last-child) {
-    margin-bottom: 28px;
+  .main-nav--modal .main-nav__item:not(:last-child) {
+    margin-bottom: 6px;
   }
 
-  .main-nav--opened .main-nav__link {
+  .main-nav--modal .main-nav__link {
     color: #011C40;
-  }
-
-  .main-nav--opened ~ .page-header__title {
-    margin-top: 185px;
+    letter-spacing: 0.2px;
   }
 
   .main-nav--nojs {
@@ -1883,7 +1997,7 @@ html {
     display: block;
     position: relative;
     width: 24px;
-    height: 12px;
+    height: 16px;
     border: 0;
     background-color: rgba(255, 255, 255, 0);
     cursor: pointer;
@@ -1915,13 +2029,13 @@ html {
   }
 
   .intro {
-    padding-top: 65px;
+    padding-top: 56px;
     padding-bottom: 65px;
   }
 
   .intro__text {
-    min-height: 510px;
     padding-top: 0;
+    padding-bottom: 219px;
     background-image: url("../img/content/intro-mobile.jpg");
     background-size: 290px 186px;
     background-position: 50% 100%;
@@ -1941,13 +2055,13 @@ html {
   }
 
   .key-points {
-    padding-top: 65px;
+    padding-top: 57px;
     padding-bottom: 65px;
     background-image: url("../img/content/key-points-bg-mobile.jpg");
   }
 
   .key-points__title {
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
     font: 600 24px/150% "Montserrat", "Arial", sans-serif;
   }
 
@@ -1959,14 +2073,26 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .key-points__item--boats .key-points__heading br {
+    display: block;
   }
 
   .cruises {
-    padding-top: 65px;
+    padding-top: 56px;
     padding-bottom: 65px;
   }
 
+  .cruises__title {
+    margin-bottom: 30px;
+    font: 600 24px/150% "Montserrat", "Arial", sans-serif;
+  }
+
   .cruises__list {
+    padding: 0 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1974,6 +2100,8 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 520px;
   }
 
   .cruise-card--astoria .cruise-card__cover {
@@ -2005,17 +2133,26 @@ html {
   }
 
   .cruise-card__heading {
-    margin: auto 25px 25px;
+    margin: auto 25px 17px;
+  }
+
+  .cruise-card__info {
+    padding: 30px 25px 28px;
+  }
+
+  .cruise-card__details {
+    margin-bottom: 23px;
   }
 
   .booking {
     min-height: 760px;
-    padding-top: 65px;
+    padding-top: 40px;
     padding-bottom: 65px;
     background-image: url("../img/content/booking-mobile.jpg");
   }
 
   .booking__title {
+    margin-bottom: 15px;
     font: 700 24px/130% "Montserrat", "Arial", sans-serif;
   }
 
@@ -2024,7 +2161,7 @@ html {
   }
 
   .booking__description {
-    margin: 0 auto 40px;
+    margin: 0 auto 33px;
     font: 400 16px/140% "Montserrat", "Arial", sans-serif;
   }
 
@@ -2034,13 +2171,15 @@ html {
 
   .booking__form {
     width: 100%;
+    max-width: 500px;
   }
 
   .form {
-    padding: 40px 30px;
+    padding: 36px 30px;
   }
 
   .form__heading {
+    margin-bottom: 27px;
     text-align: center;
     font: 500 18px/140% "Montserrat", "Arial", sans-serif;
   }
@@ -2050,6 +2189,7 @@ html {
   }
 
   .form__checkbox-label {
+    margin-bottom: 25px;
     min-height: 20px;
   }
 
@@ -2069,8 +2209,8 @@ html {
   }
 
   .contacts {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 58px;
+    padding-bottom: 58px;
   }
 
   .contacts .container {
@@ -2094,6 +2234,8 @@ html {
   }
 
   .page-footer {
+    padding-top: 38px;
+    padding-bottom: 37px;
     min-height: 283px;
   }
 
@@ -2108,11 +2250,11 @@ html {
   }
 
   .page-footer .main-nav__logo {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .page-footer .main-nav__list {
-    margin: 0 auto 30px 0;
+    margin: 0 auto 17px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2126,6 +2268,10 @@ html {
 
   .page-footer .main-nav__item {
     text-align: left;
+  }
+
+  .page-footer .main-nav__item:not(:last-child) {
+    margin-bottom: 8px;
   }
 
   .page-footer .main-nav__link {
