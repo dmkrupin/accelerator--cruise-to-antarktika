@@ -639,7 +639,7 @@ html {
 .container {
   width: 100%;
   min-width: 320px;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
   padding: 0 103px;
 }
@@ -651,7 +651,7 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 12px 46px;
+  padding: 12px 5px;
   background-color: #ffffff;
   border: none;
   cursor: pointer;
@@ -683,7 +683,7 @@ html {
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 43, 102, 0.5);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -915,17 +915,17 @@ html {
 }
 
 .intro__text {
-  min-height: 301px;
   padding-top: 57px;
   background-image: url("../img/content/intro-desktop.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0%;
-  background-size: 560px 301px;
+  background-size: 50%;
 }
 
 .intro__title {
   margin-top: 0;
   margin-bottom: 23px;
+  width: 40%;
   max-width: 512px;
   font: 600 28px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
@@ -938,6 +938,7 @@ html {
 .intro__description {
   margin: 0;
   padding: 0;
+  width: 40%;
   max-width: 512px;
   font: 400 16px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
@@ -1052,7 +1053,7 @@ html {
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-gap: 30px;
 }
 
 .cruises__item {
@@ -1205,7 +1206,7 @@ html {
 }
 
 .cruise-card__description:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .cruise-card__button {
@@ -1223,6 +1224,7 @@ html {
 
 .booking .container {
   position: relative;
+  min-height: 555px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1233,14 +1235,15 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .booking__title {
   margin: -8px 0 7px 60px;
   padding: 0;
+  max-width: 43%;
   font: 700 40px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
 }
@@ -1248,6 +1251,7 @@ html {
 .booking__description {
   margin: 0 0 0 60px;
   padding: 0;
+  max-width: 40%;
   font: 400 18px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
 }
@@ -1584,11 +1588,13 @@ html {
 
   .intro__title {
     margin-bottom: 18px;
+    width: auto;
     max-width: 324px;
     font: 600 26px/140% "Montserrat", "Arial", sans-serif;
   }
 
   .intro__description {
+    width: auto;
     max-width: 324px;
     font: 400 16px/150% "Montserrat", "Arial", sans-serif;
   }
@@ -1606,6 +1612,8 @@ html {
 
   .key-points__list {
     gap: 30px;
+    margin: 0;
+    max-width: none;
   }
 
   .key-points__item {
@@ -1662,6 +1670,8 @@ html {
   .cruises__list {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    max-width: none;
   }
 
   .cruise-card--astoria .cruise-card__cover {
@@ -1700,6 +1710,10 @@ html {
     padding: 30px 35px;
   }
 
+  .booking .container {
+    min-height: auto;
+  }
+
   .booking {
     min-height: 805px;
     padding-top: 70px;
@@ -1709,12 +1723,14 @@ html {
 
   .booking__title {
     margin: 19px auto 5px;
+    max-width: none;
     text-align: center;
     font: 700 34px/150% "Montserrat", "Arial", sans-serif;
   }
 
   .booking__description {
     margin: 0 auto 52px;
+    max-width: none;
     text-align: center;
   }
 
@@ -1725,6 +1741,7 @@ html {
     transform: translateY(0);
     margin: 0 auto;
     width: 60%;
+    max-width: none;
   }
 
   .form {
@@ -2014,12 +2031,11 @@ html {
   .intro {
     padding-top: 56px;
     padding-bottom: 65px;
-    min-height: 640px;
   }
 
   .intro__text {
-    min-height: 519px;
     padding-top: 0;
+    padding-bottom: 219px;
     background-image: url("../img/content/intro-mobile.jpg");
     background-size: 290px 186px;
     background-position: 50% 100%;
@@ -2057,6 +2073,8 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
   }
 
   .key-points__item--boats .key-points__heading br {
@@ -2082,6 +2100,8 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 520px;
   }
 
   .cruise-card--astoria .cruise-card__cover {
@@ -2117,7 +2137,7 @@ html {
   }
 
   .cruise-card__info {
-    padding: 30px 25px;
+    padding: 30px 25px 28px;
   }
 
   .cruise-card__details {
@@ -2151,6 +2171,7 @@ html {
 
   .booking__form {
     width: 100%;
+    max-width: 500px;
   }
 
   .form {

@@ -1,6 +1,5 @@
 .booking {
     min-height: 555px;
-
     background-color: $color-solitude;
 
     background-image: url("../img/content/booking-desktop.jpg");
@@ -10,11 +9,16 @@
 
     & .container {
         position: relative;
+        min-height: 555px;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+
+        @include vp-1023 {
+          min-height: auto;
+        }
     }
 
     @include retina {
@@ -48,12 +52,14 @@
 .booking__title {
     margin: -8px 0 7px 60px;
     padding: 0;
+    max-width: 43%;
 
     font: 700 40px/150% $ff-montserrat;
     color: $color-tangaroa;
 
     @include vp-1023 {
         margin: 19px auto 5px;
+        max-width: none;
 
         text-align: center;
         font: 700 34px/150% $ff-montserrat;
@@ -71,12 +77,14 @@
 .booking__description {
     margin: 0 0 0 60px;
     padding: 0;
+    max-width: 40%;
 
     font: 400 18px/150% $ff-montserrat;
     color: $color-tangaroa;
 
     @include vp-1023 {
         margin: 0 auto 52px;
+        max-width: none;
 
         text-align: center;
     }
@@ -104,9 +112,11 @@
 
         margin: 0 auto;
         width: 60%;
+        max-width: none;
     }
 
     @include vp-767 {
         width: 100%;
+        max-width: $mcw-mobile;
     }
 }
