@@ -1,5 +1,5 @@
 .key-points {
-    padding-top: 112px;
+    padding-top: 109px;
     padding-bottom: 117px;
 
     background-color: $color-solitude;
@@ -36,7 +36,7 @@
 }
 
 .key-points__title {
-    margin: 0 0 47px 0;
+    margin: 0 0 49px 0;
     padding: 0;
 
     text-align: center;
@@ -74,6 +74,7 @@
     @include vp-767 {
         display: flex;
         flex-direction: column;
+        gap: 0;
         margin: 0 auto;
         max-width: $mcw-mobile;
 
@@ -89,6 +90,12 @@
         padding: 71px 16px 19px 20px;
     }
 
+    @include vp-767 {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -100,6 +107,20 @@
         @include vp-1023 {
             left: 20px;
         }
+    }
+
+    &--liner {
+      .key-points__heading {
+        br {
+          display: none;
+        }
+
+        @include vp-767 {
+          br {
+            display: block;
+          }
+        }
+      }
     }
 
     &--all-inclusive {
@@ -217,5 +238,9 @@
 
     @include vp-1023 {
         font: 400 14px/143% $ff-montserrat;
+
+        br {
+          display: none;
+        }
     }
 }

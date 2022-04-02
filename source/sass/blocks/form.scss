@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
 
-    padding: 47px 50px;
+    padding: 45px 50px 53px;
     background-color: $color-tangaroa;
     color: $color-default-white;
 
     @include vp-1023 {
-        padding: 46px 52px;
+        padding: 44px 49px 52px;
     }
 
     @include vp-767 {
-        padding: 36px 30px;
+        padding: 36px 30px 41px;
     }
 }
 
@@ -21,14 +21,29 @@
 
     font: 500 18px/150% $ff-montserrat;
 
-    @include vp-767 {
-        br {
-            display: none;
-        }
+    @include vp-1023 {
+      margin-bottom: 27px;
+    }
 
-        margin-bottom: 27px;
+    @include vp-767 {
         text-align: center;
         font: 500 18px/140% $ff-montserrat;
+    }
+
+    br:not(:nth-child(2)) {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    br:nth-child(2) {
+      display: block;
+
+      @include vp-767 {
+        display: none;
+      }
     }
 }
 
@@ -52,7 +67,7 @@
 }
 
 .form__checkbox-label {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     min-height: 18px;
     position: relative;
     display: flex;
@@ -61,8 +76,9 @@
     cursor: pointer;
 
     @include vp-767 {
-      margin-bottom: 25px;
-        min-height: 20px;
+      margin-bottom: 27px;
+      min-height: 20px;
+      align-items: flex-start;
     }
 }
 .form__checkbox {
@@ -111,5 +127,13 @@
     @include vp-767 {
         margin-left: 28px;
         font: 400 10px/120% $ff-montserrat;
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
     }
 }

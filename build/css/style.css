@@ -651,7 +651,7 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 12px 5px;
+  padding: 10px 5px;
   background-color: #ffffff;
   border: none;
   cursor: pointer;
@@ -861,10 +861,8 @@ html {
   width: 70px;
   height: 38px;
   margin-right: 40px;
-}
-
-.main-nav__logo svg {
-  fill: #F9FBFD;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .main-nav__logo svg {
@@ -873,6 +871,7 @@ html {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+  fill: #F9FBFD;
   width: 70px;
   height: 38px;
 }
@@ -916,10 +915,11 @@ html {
 
 .intro__text {
   padding-top: 57px;
+  padding-bottom: 60px;
   background-image: url("../img/content/intro-desktop.jpg");
   background-repeat: no-repeat;
   background-position: 100% 0%;
-  background-size: 50%;
+  background-size: 48%;
 }
 
 .intro__title {
@@ -938,14 +938,14 @@ html {
 .intro__description {
   margin: 0;
   padding: 0;
-  width: 40%;
+  width: 45%;
   max-width: 512px;
   font: 400 16px/150% "Montserrat", "Arial", sans-serif;
   color: #011C40;
 }
 
 .key-points {
-  padding-top: 112px;
+  padding-top: 109px;
   padding-bottom: 117px;
   background-color: #E3ECF6;
   background-image: url("../img/content/key-points-bg-desktop.jpg");
@@ -955,7 +955,7 @@ html {
 }
 
 .key-points__title {
-  margin: 0 0 47px 0;
+  margin: 0 0 49px 0;
   padding: 0;
   text-align: center;
   color: #011C40;
@@ -985,6 +985,10 @@ html {
   top: 30px;
   left: 30px;
   background-repeat: no-repeat;
+}
+
+.key-points__item--liner .key-points__heading br {
+  display: none;
 }
 
 .key-points__item--all-inclusive .key-points__heading br {
@@ -1053,11 +1057,15 @@ html {
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  gap: 30px;
 }
 
 .cruises__item {
-  min-height: 386px;
+  height: 386px;
+}
+
+.cruises__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .cruise-card {
@@ -1139,7 +1147,7 @@ html {
 .cruise-card__info {
   width: 100%;
   height: 100%;
-  padding: 30px 25px;
+  padding: 30px 24px 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1147,6 +1155,8 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow-y: scroll;
+  word-break: break-word;
   background-color: #011C40;
   color: #ffffff;
 }
@@ -1169,7 +1179,7 @@ html {
 }
 
 .cruise-card__details {
-  margin: 0;
+  margin: 0 0 22px;
   padding: 0;
 }
 
@@ -1256,6 +1266,14 @@ html {
   color: #011C40;
 }
 
+.booking__description br:not(:nth-child(2)) {
+  display: none;
+}
+
+.booking__description br:nth-child(2) {
+  display: block;
+}
+
 .booking__form {
   position: absolute;
   top: 50%;
@@ -1273,7 +1291,7 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 47px 50px;
+  padding: 45px 50px 53px;
   background-color: #011C40;
   color: #ffffff;
 }
@@ -1282,6 +1300,14 @@ html {
   margin: 0 0 25px;
   padding: 0;
   font: 500 18px/150% "Montserrat", "Arial", sans-serif;
+}
+
+.form__heading br:not(:nth-child(2)) {
+  display: none;
+}
+
+.form__heading br:nth-child(2) {
+  display: block;
 }
 
 .form__input {
@@ -1323,7 +1349,7 @@ html {
 }
 
 .form__checkbox-label {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   min-height: 18px;
   position: relative;
   display: -webkit-box;
@@ -1371,6 +1397,10 @@ html {
   font: 400 10px/130% "Montserrat", "Arial", sans-serif;
 }
 
+.form__checkbox-label-text br {
+  display: none;
+}
+
 .contacts {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -1382,7 +1412,6 @@ html {
   display: flex;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  gap: 100px;
 }
 
 .contacts__map {
@@ -1398,6 +1427,7 @@ html {
 }
 
 .contacts__info {
+  width: 43%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1408,6 +1438,7 @@ html {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-left: 100px;
 }
 
 .contacts__heading {
@@ -1432,9 +1463,13 @@ html {
 }
 
 .contacts__address svg {
-  margin-right: 10px;
+  margin-right: 9px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+.contacts__address br {
+  display: none;
 }
 
 .contacts__tel {
@@ -1444,7 +1479,7 @@ html {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0;
   color: #011C40;
   font: 400 16px/150% "Montserrat", "Arial", sans-serif;
@@ -1452,6 +1487,8 @@ html {
 
 .contacts__tel svg {
   margin-right: 10px;
+  position: relative;
+  top: 1px;
 }
 
 .page-footer {
@@ -1577,6 +1614,7 @@ html {
   .intro__text {
     min-height: 264px;
     padding-top: 0;
+    padding-bottom: 0;
     background-image: url("../img/content/intro-tablet.jpg");
     background-size: 324px 264px;
     background-position: 100% 50%;
@@ -1658,6 +1696,10 @@ html {
     font: 400 14px/143% "Montserrat", "Arial", sans-serif;
   }
 
+  .key-points__details br {
+    display: none;
+  }
+
   .cruises {
     padding-top: 90px;
     padding-bottom: 100px;
@@ -1707,7 +1749,8 @@ html {
   }
 
   .cruise-card__info {
-    padding: 30px 35px;
+    padding: 30px 35px 33px;
+    overflow-y: initial;
   }
 
   .booking .container {
@@ -1740,21 +1783,21 @@ html {
     -ms-transform: translateY(0);
     transform: translateY(0);
     margin: 0 auto;
-    width: 60%;
+    width: 59.3%;
     max-width: none;
   }
 
   .form {
-    padding: 46px 52px;
+    padding: 44px 49px 52px;
+  }
+
+  .form__heading {
+    margin-bottom: 27px;
   }
 
   .contacts {
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-
-  .contacts .container {
-    gap: 30px;
   }
 
   .contacts__map {
@@ -1768,6 +1811,10 @@ html {
     height: 335px;
   }
 
+  .contacts__info {
+    margin-left: 30px;
+  }
+
   .contacts__heading {
     margin: 0 0 26px;
   }
@@ -1779,6 +1826,12 @@ html {
   .contacts__address svg {
     width: 18px;
     height: 22px;
+    position: relative;
+    top: 6px;
+  }
+
+  .contacts__address br {
+    display: block;
   }
 
   .page-footer {
@@ -2073,8 +2126,17 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 0;
     margin: 0 auto;
     max-width: 500px;
+  }
+
+  .key-points__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .key-points__item--liner .key-points__heading br {
+    display: block;
   }
 
   .key-points__item--boats .key-points__heading br {
@@ -2102,6 +2164,7 @@ html {
     flex-direction: column;
     margin: 0 auto;
     max-width: 520px;
+    gap: 0;
   }
 
   .cruise-card--astoria .cruise-card__cover {
@@ -2137,7 +2200,7 @@ html {
   }
 
   .cruise-card__info {
-    padding: 30px 25px 28px;
+    padding: 30px 25px 32px;
   }
 
   .cruise-card__details {
@@ -2160,13 +2223,17 @@ html {
     display: none;
   }
 
+  .booking__description br:not(:nth-child(2)) {
+    display: block;
+  }
+
+  .booking__description br:nth-child(2) {
+    display: none;
+  }
+
   .booking__description {
     margin: 0 auto 33px;
     font: 400 16px/140% "Montserrat", "Arial", sans-serif;
-  }
-
-  .booking__description br {
-    display: none;
   }
 
   .booking__form {
@@ -2175,22 +2242,28 @@ html {
   }
 
   .form {
-    padding: 36px 30px;
+    padding: 36px 30px 41px;
   }
 
   .form__heading {
-    margin-bottom: 27px;
     text-align: center;
     font: 500 18px/140% "Montserrat", "Arial", sans-serif;
   }
 
-  .form__heading br {
+  .form__heading br:not(:nth-child(2)) {
+    display: block;
+  }
+
+  .form__heading br:nth-child(2) {
     display: none;
   }
 
   .form__checkbox-label {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
     min-height: 20px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .form__checkbox-box {
@@ -2208,6 +2281,10 @@ html {
     font: 400 10px/120% "Montserrat", "Arial", sans-serif;
   }
 
+  .form__checkbox-label-text br {
+    display: block;
+  }
+
   .contacts {
     padding-top: 58px;
     padding-bottom: 58px;
@@ -2218,7 +2295,6 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 43px;
   }
 
   .contacts__map {
@@ -2231,6 +2307,12 @@ html {
 
   .contacts__map iframe {
     height: 316px;
+  }
+
+  .contacts__info {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 43px;
   }
 
   .page-footer {

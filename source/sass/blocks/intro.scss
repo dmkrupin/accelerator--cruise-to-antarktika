@@ -19,11 +19,12 @@
 
 .intro__text {
     padding-top: 57px;
+    padding-bottom: 60px;
 
     background-image: url("../img/content/intro-desktop.jpg");
     background-repeat: no-repeat;
     background-position: 100% 0%;
-    background-size: 50%;
+    background-size: 48%;
 
     @include retina {
         background-image: url("../img/content/intro-desktop@2x.jpg");
@@ -32,6 +33,7 @@
     @include vp-1023 {
         min-height: 264px;
         padding-top: 0;
+        padding-bottom: 0;
 
         background-image: url("../img/content/intro-tablet.jpg");
         background-size: 324px 264px;
@@ -93,7 +95,7 @@
 .intro__description {
     margin: 0;
     padding: 0;
-    width: 40%;
+    width: 45%;
     max-width: 512px;
 
     font: 400 16px/150% $ff-montserrat;

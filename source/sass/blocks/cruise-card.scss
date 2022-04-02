@@ -218,19 +218,22 @@
 .cruise-card__info {
     width: 100%;
     height: 100%;
-    padding: 30px 25px;
+    padding: 30px 24px 33px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    word-break: break-word;
 
     background-color: $color-tangaroa;
     color: $color-default-white;
 
     @include vp-1023 {
-      padding: 30px 35px;
+      padding: 30px 35px 33px;
+      overflow-y: initial;
     }
 
     @include vp-767 {
-      padding: 30px 25px 28px;
+      padding: 30px 25px 32px;
     }
 }
 
@@ -244,7 +247,7 @@
 }
 
 .cruise-card__details {
-    margin: 0;
+    margin: 0 0 22px;
     padding: 0;
 
     @include vp-767 {

@@ -75,10 +75,7 @@
     width: 70px;
     height: 38px;
     margin-right: 40px;
-
-    svg {
-        fill: $color-alice-blue;
-    }
+    align-self: flex-start;
 
     @include vp-1023 {
         width: 38px;
@@ -95,6 +92,7 @@
         display: inline-block;
         vertical-align: middle;
         max-width: max-content;
+        fill: $color-alice-blue;
 
         width: 70px;
         height: 38px;

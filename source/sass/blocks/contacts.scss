@@ -15,15 +15,9 @@
     .container {
         display: flex;
         flex-wrap: nowrap;
-        gap: 100px;
-
-        @include vp-1023 {
-            gap: 30px;
-        }
 
         @include vp-767 {
             flex-direction: column;
-            gap: 43px;
         }
     }
 }
@@ -62,9 +56,22 @@
 }
 
 .contacts__info {
+    width: 43%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    margin-left: 100px;
+
+    @include vp-1023 {
+      margin-left: 30px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 43px;
+    }
 }
 
 .contacts__heading {
@@ -93,20 +100,30 @@
     font-style: normal;
 
     svg {
-        margin-right: 10px;
+        margin-right: 9px;
         flex-shrink: 0;
 
         @include vp-1023 {
           width: 18px;
           height: 22px;
+          position: relative;
+          top: 6px;
         }
+    }
+
+    br {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
     }
 }
 
 .contacts__tel {
     display: flex;
     justify-content: flex-start;
-    margin: 0;
+    margin: 0 0 10px;
     padding: 0;
 
     color: $color-tangaroa;
@@ -114,5 +131,8 @@
 
     svg {
         margin-right: 10px;
+
+        position: relative;
+        top: 1px;
     }
 }
