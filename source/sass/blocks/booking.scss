@@ -1,5 +1,8 @@
+//Section height - desktop:
+$sh-desktop:       555px;
+
 .booking {
-    min-height: 555px;
+    min-height: $sh-desktop;
     background-color: $color-solitude;
 
     background-image: url("../img/content/booking-desktop.jpg");
@@ -9,7 +12,7 @@
 
     & .container {
         position: relative;
-        min-height: 555px;
+        min-height: $sh-desktop;
 
         display: flex;
         flex-direction: column;
@@ -117,6 +120,8 @@
     top: 50%;
     right: 12%;
     transform: translateY(-50%);
+    max-width: 405px;
+    max-height: $sh-desktop;
 
     @include vp-1023 {
         position: static;
@@ -125,6 +130,7 @@
         margin: 0 auto;
         width: 59.3%;
         max-width: none;
+        max-height: none;
     }
 
     @include vp-767 {

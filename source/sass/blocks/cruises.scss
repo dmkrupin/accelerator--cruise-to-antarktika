@@ -61,6 +61,8 @@
     height: 386px;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      @include vp-767 {
+        margin-bottom: 30px;
+      }
     }
 }
