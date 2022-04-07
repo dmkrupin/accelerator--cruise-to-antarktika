@@ -33,14 +33,16 @@
 
 .cruises__list {
     margin: 0;
-    padding: 0 15px;
+    padding: 0 11px;
     list-style: none;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    column-gap: 25px;
+    row-gap: 30px;
 
     @include vp-1023 {
+        padding: 0 15px;
         grid-template-columns: repeat(2, 1fr);
         margin: 0;
         max-width: none;

@@ -1181,15 +1181,19 @@ html {
 
 .cruises__list {
   margin: 0;
-  padding: 0 15px;
+  padding: 0 11px;
   list-style: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px; }
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  row-gap: 30px; }
   @media (max-width: 1023px) {
     .cruises__list {
+      padding: 0 15px;
       -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
       margin: 0;
