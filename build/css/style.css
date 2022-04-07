@@ -1209,7 +1209,11 @@ html {
       gap: 0; } }
 
 .cruises__item {
-  height: 386px; }
+  height: 28.3vw;
+  max-height: 386px; }
+  @media (max-width: 1023px) {
+    .cruises__item {
+      height: 386px; } }
   @media (max-width: 767px) {
     .cruises__item:not(:last-child) {
       margin-bottom: 30px; } }
@@ -1403,7 +1407,7 @@ html {
       overflow-y: initial; } }
   @media (max-width: 767px) {
     .cruise-card__info {
-      padding: 30px 25px 32px; } }
+      padding: 30px 25px 35px; } }
 
 .cruise-card__cruise-name {
   -webkit-touch-callout: none;
@@ -1442,6 +1446,9 @@ html {
   /* Non-prefixed version, currently not supported by any browser */
   margin-bottom: 4px;
   font: 500 14px/140% "Montserrat", "Arial", sans-serif; }
+  @media (max-width: 767px) {
+    .cruise-card__term {
+      margin-bottom: 3px; } }
 
 .cruise-card__description {
   -webkit-touch-callout: none;

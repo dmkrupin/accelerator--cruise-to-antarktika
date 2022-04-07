@@ -233,7 +233,7 @@
     }
 
     @include vp-767 {
-      padding: 30px 25px 32px;
+      padding: 30px 25px 35px;
     }
 }
 
@@ -261,6 +261,10 @@
     margin-bottom: 4px;
 
     font: 500 14px/140% $ff-montserrat;
+
+    @include vp-767 {
+      margin-bottom: 3px;
+    }
 }
 .cruise-card__description {
     @include unselectable;

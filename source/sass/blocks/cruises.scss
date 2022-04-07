@@ -58,7 +58,12 @@
 }
 
 .cruises__item {
-    height: 386px;
+    height: 28.3vw;
+    max-height: 386px;
+
+    @include vp-1023 {
+      height: 386px;
+    }
 
     &:not(:last-child) {
       @include vp-767 {
